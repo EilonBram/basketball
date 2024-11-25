@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Score</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .score-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .team {
+            display: flex;
+            align-items: center;
+        }
+        .team img {
+            width: 300px; /* Increase image size */
+            height: 300px;
+             margin-bottom: 15px; /* Add space between photo and name */
+        }
+        .team span {
+            font-size: 48px; /* Larger team names */
+            font-weight: bold;
+        }
+        .score {
+            font-size: 32px; /* Larger score */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Headline -->
+    <h1>מאזן כל הזמנים בטוקיי בין צחו לאילון</h1>
+
+    <!-- Score Section -->
+    <div class="score-container">
+        <!-- Right Team -->
+        <div class="team">
+	    <img src="sheep.jpg">
+            <span>צחו</span>
+        </div>
+        
+
+        <div class="score">8 - 45,783 </div>
+        
+        <!-- Left Team -->
+        <div class="team">
+            <span>אילון</span>
+	    <img src="pep.jpg" >
+        </div>
+    </div>
+</body>
+</html>
