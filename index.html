@@ -9,6 +9,8 @@
             font-family: Arial, sans-serif;
             text-align: center;
             direction: rtl;
+            margin: 0;
+            padding: 0;
         }
         h1 {
             font-size: 36px;
@@ -16,30 +18,49 @@
         }
         .score-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            justify-content: center; /* Center content on smaller screens */
             align-items: center;
-            width: 80%;
+            width: 90%; /* Slightly smaller width for better fit on mobile */
             margin: 0 auto;
             border: 1px solid #ccc;
             padding: 20px;
             background-color: #f9f9f9;
+            box-sizing: border-box; /* Ensures padding doesn't overflow */
         }
         .team {
             display: flex;
+            flex-direction: column; /* Stack image and text vertically on mobile */
             align-items: center;
+            margin: 10px; /* Adds spacing between items */
         }
         .team img {
-            width: 300px; /* Increase image size */
-            height: 300px;
-             margin-bottom: 15px; /* Add space between photo and name */
+            width: 150px; /* Smaller size for mobile */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space between image and name */
         }
         .team span {
-            font-size: 48px; /* Larger team names */
+            font-size: 24px; /* Adjust font size for smaller screens */
             font-weight: bold;
         }
         .score {
-            font-size: 32px; /* Larger score */
+            font-size: 32px; /* Larger score size remains consistent */
             font-weight: bold;
+            margin: 20px 0; /* Space above and below the score */
+        }
+
+        /* Media Query for Larger Screens (Desktop) */
+        @media (min-width: 768px) {
+            .score-container {
+                flex-direction: row; /* Align items horizontally on larger screens */
+                justify-content: space-between; /* Distribute items evenly */
+            }
+            .team img {
+                width: 300px; /* Larger size for desktop */
+            }
+            .team span {
+                font-size: 48px; /* Larger font size for desktop */
+            }
         }
     </style>
 </head>
@@ -51,17 +72,17 @@
     <div class="score-container">
         <!-- Right Team -->
         <div class="team">
-	    <img src="sheep.jpg">
+            <img src="sheep.jpg" alt="Sheep">
             <span>צחו</span>
         </div>
         
-
-        <div class="score">8 - 45,783 </div>
+        <!-- Score -->
+        <div class="score">8 - 45,783</div>
         
         <!-- Left Team -->
         <div class="team">
+            <img src="pep.jpg" alt="Pep">
             <span>אילון</span>
-	    <img src="pep.jpg" >
         </div>
     </div>
 </body>
